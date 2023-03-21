@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://xu2fdw1n12v3"]
+
+[ext_resource type="PackedScene" uid="uid://dh7d2fhct3kxl" path="res://shader_canvas.tscn" id="1_vfotg"]
+[ext_resource type="Shader" path="res://example.gdshader" id="2_pgrch"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_hrqon"]
+shader = ExtResource("2_pgrch")
+shader_parameter/mouse_position = null
+
+[node name="main" type="Node2D"]
+
+[node name="shader_canvas" parent="." instance=ExtResource("1_vfotg")]
+material = SubResource("ShaderMaterial_hrqon")
+position = Vector2(998, 998)
+scale = Vector2(1.388, 1.388)

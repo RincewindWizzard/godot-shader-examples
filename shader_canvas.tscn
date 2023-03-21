@@ -1,0 +1,14 @@
+[gd_scene load_steps=5 format=3 uid="uid://dh7d2fhct3kxl"]
+
+[ext_resource type="Texture2D" uid="uid://bpv7s6irne0vl" path="res://sprite.jpg" id="1_spinf"]
+[ext_resource type="Shader" path="res://example.gdshader" id="1_wavem"]
+[ext_resource type="Script" path="res://shader_canvas.gd" id="3_atjnj"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_7iu4r"]
+shader = ExtResource("1_wavem")
+shader_parameter/mouse_position = null
+
+[node name="Sprite" type="Sprite2D"]
+material = SubResource("ShaderMaterial_7iu4r")
+texture = ExtResource("1_spinf")
+script = ExtResource("3_atjnj")
