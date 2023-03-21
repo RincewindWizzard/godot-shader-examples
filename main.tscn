@@ -1,15 +1,19 @@
-[gd_scene load_steps=4 format=3 uid="uid://xu2fdw1n12v3"]
+[gd_scene load_steps=2 format=3 uid="uid://xu2fdw1n12v3"]
 
 [ext_resource type="PackedScene" uid="uid://dh7d2fhct3kxl" path="res://shader_canvas.tscn" id="1_vfotg"]
-[ext_resource type="Shader" path="res://example.gdshader" id="2_pgrch"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_hrqon"]
-shader = ExtResource("2_pgrch")
-shader_parameter/mouse_position = null
+[node name="Panel" type="Panel"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1000.0
+offset_bottom = -1000.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
 
-[node name="main" type="Node2D"]
-
-[node name="shader_canvas" parent="." instance=ExtResource("1_vfotg")]
-material = SubResource("ShaderMaterial_hrqon")
-position = Vector2(998, 998)
-scale = Vector2(1.388, 1.388)
+[node name="RainbowRings" parent="." instance=ExtResource("1_vfotg")]
+layout_mode = 1
+offset_right = -68.12
+offset_bottom = -59.08

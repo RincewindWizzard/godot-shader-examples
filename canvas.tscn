@@ -1,6 +1,16 @@
-[gd_scene load_steps=2 format=3 uid="uid://bgy0bp2y7v0xs"]
+[gd_scene load_steps=3 format=3 uid="uid://bgy0bp2y7v0xs"]
 
-[ext_resource type="Script" path="res://Canvas.gd" id="1_1px81"]
+[ext_resource type="Shader" path="res://example2.gdshader" id="1_xnkvx"]
 
-[node name="Canvas" type="Node2D"]
-script = ExtResource("1_1px81")
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ataqd"]
+shader = ExtResource("1_xnkvx")
+
+[node name="ShaderCanvas" type="ColorRect"]
+material = SubResource("ShaderMaterial_ataqd")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
